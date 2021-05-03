@@ -19,6 +19,9 @@ export {
   createOperator,
   fromPublic,
   fromSeed,
+} from "./nkeys.ts";
+
+export type {
   KeyPair,
   NKeysError,
   NKeysErrorCode,

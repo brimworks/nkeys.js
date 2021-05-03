@@ -66,6 +66,7 @@ for (const fn of files) {
   let txt = new TextDecoder().decode(data);
   let mod = txt.replace(/from\s+"(\S+).[t|j]s"/gim, 'from "$1"');
   mod = mod.replace(/require\("(\S+).[j|t]s"\)/gim, 'require("$1")');
+  mod = mod.replace(/^export type /gim, 'export ');
   const target = join(out, basename(fn));
   await Deno.writeFile(target, new TextEncoder().encode(mod));
   if (txt.length !== mod.length) {

@@ -33,7 +33,7 @@ import {
   sign_detached,
   sign_detached_verify,
   randomBytes,
-} from "https://deno.land/x/tweetnacl_deno/src/nacl.ts";
+} from "https://deno.land/x/tweetnacl_deno_fix@1.1.2/src/nacl.ts";
 
 export const denoHelper = {
   fromSeed: sign_keyPair_fromSeed,
